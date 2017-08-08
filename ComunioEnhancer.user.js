@@ -1,6 +1,7 @@
 // ==UserScript==
 // @name         Comunio Enhancer
 // @namespace    http://tampermonkey.net/
+// @downloadURL  https://github.com/traschke/comunio-enhacer-userscript/raw/master/ComunioEnhancer.user.js
 // @version      0.1
 // @description  Useful extension for comunio.de
 // @author       Timo Raschke
