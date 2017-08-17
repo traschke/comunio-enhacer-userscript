@@ -9,7 +9,7 @@
 // @grant        GM_addStyle
 // ==/UserScript==
 
-GM_addStyle("                                       \
+GM_addStyle('                                       \
 .enhance-money-win {                                \
     color: #8CBF3F;                                 \
 }                                                   \
@@ -25,7 +25,7 @@ GM_addStyle("                                       \
 .enhance-tradable-other {                           \
     background-color: #dbbfbe !important;           \
 }                                                   \
-");
+');
 
 (() => {
 	console.log('Welcome to Comunio Enhancer!');
@@ -65,7 +65,7 @@ GM_addStyle("                                       \
 				let tradables = $('.market .tradable');
 				$.each(tradables, function (index, tradable) {
 					let playerNameEle = $(tradable).find('.name')[0];
-					let originalHref = $(playerNameEle).attr("href");
+					let originalHref = $(playerNameEle).attr('href');
 					let playerId = originalHref.split('-')[1];
 					tradablesMap.set(playerId, tradable);
 				});
@@ -121,7 +121,7 @@ GM_addStyle("                                       \
 					let label = $(tradable[1]).find('.label')[0];
 
 					if (winMargin !== 0) {
-						winMargin = numberWithCommas(winMargin)
+						winMargin = numberWithCommas(winMargin);
 					} else {
 						winMargin = '-';
 					}
@@ -175,7 +175,7 @@ GM_addStyle("                                       \
 				return resolve();
 			});
 		}
-	}
+	};
 
 	let exchangeMarket = () => {
 		console.log('Waiting for market being loaded...');
@@ -188,7 +188,7 @@ GM_addStyle("                                       \
 	};
 
 	let checkIsRemoved = (ele) => {
-		return new Promise((resolve, reject) => {
+		return new Promise(resolve => {
 			let appearsInterval = setInterval(() => {
 				if ($(ele).length) {
 					clearInterval(appearsInterval);
@@ -204,7 +204,7 @@ GM_addStyle("                                       \
 	};
 
 	let checkIsAvailable = (ele) => {
-		return new Promise((resolve, reject) => {
+		return new Promise(resolve => {
 			let appearsInterval = setInterval(() => {
 				if ($(ele).length) {
 					clearInterval(appearsInterval);
@@ -221,9 +221,9 @@ GM_addStyle("                                       \
 				if (pathname !== window.location.pathname) {
 					pathname = window.location.pathname;
 					switch (pathname) {
-						case '/exchangemarket':
-							exchangeMarket();
-							break;
+					case '/exchangemarket':
+						exchangeMarket();
+						break;
 					}
 				}
 			}, 1000);
