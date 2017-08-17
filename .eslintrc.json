@@ -1,0 +1,32 @@
+{
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "es6": true,
+		"node": false,
+		"jquery": true
+    },
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "sourceType": "module"
+    },
+    "rules": {
+        "no-const-assign": "warn",
+        "no-this-before-super": "warn",
+        "no-undef": "warn",
+        "no-unreachable": "warn",
+        "no-unused-vars": "warn",
+        "constructor-super": "warn",
+		"valid-typeof": "warn",
+		"indent": ["warn", "tab"],
+		"quotes": ["warn", "single"],
+		"semi": ["error", "always"],
+		"comma-spacing": ["warn", { "before": false, "after": true }],
+		"eol-last": ["warn", "always"]
+	},
+	"globals": {
+        "GM_addStyle": false
+    }
+}
